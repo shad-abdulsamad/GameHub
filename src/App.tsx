@@ -4,6 +4,7 @@ import GameGrid from "./components/GameGrid";
 import GenreList from "./components/GenreList";
 import { useState } from "react";
 import { Genre } from "./hooks/useGenres";
+import PlatformSelector from "./components/PlatformSelector";
 function App() {
   const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
   return (
@@ -20,6 +21,7 @@ function App() {
       <GridItem area="nav">
         <NavBar />
       </GridItem>
+
       <Show above="lg">
         <GridItem area="aside">
           <GenreList
@@ -29,6 +31,7 @@ function App() {
         </GridItem>
       </Show>
       <GridItem area="main">
+        <PlatformSelector />
         <GameGrid selectedGenre={selectedGenre} />
       </GridItem>
     </Grid>
@@ -36,3 +39,4 @@ function App() {
 }
 
 export default App;
+//https://github.com/shad-abdulsamad/GameHub.git
