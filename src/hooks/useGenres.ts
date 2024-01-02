@@ -30,7 +30,7 @@ export interface Genre {
   image_background: string;
 }
 
-const useGenres = (): UseQueryResult<FetchResponse<Genre>> =>
+const useGenres = () =>
   useQuery({
     queryKey: ["genres"],
     queryFn: () => apiClient.get<FetchResponse<Genre>>("/genres").then((res) => res.data),
