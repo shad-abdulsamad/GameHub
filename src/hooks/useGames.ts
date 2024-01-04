@@ -34,5 +34,4 @@ const useGames = (gameQuery: GameQuery) => useInfiniteQuery<FetchResponse<Game>,
       staleTime: 24*60*60*1000 //24h
 });
 
-
 export default useGames; 
