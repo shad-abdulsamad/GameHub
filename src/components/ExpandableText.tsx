@@ -17,7 +17,7 @@ const ExpandableText = ({ children }: Props) => {
 
   return (
     <Text>
-      {summary}...
+      {summary}
       <Button
         onClick={() => setExpanded(!isExpanded)}
         padding={"5px"}
